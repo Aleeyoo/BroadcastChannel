@@ -55,7 +55,7 @@ html {
 
 .search-form {
   display: none;
-  background: var(--code-background-color);
+  background: transparent;
   color: var(--secondary-color);
   padding: 8px;
   border-radius: var(--box-border-radius);
@@ -74,14 +74,6 @@ html {
   }
 }
 
-.copyright-wrap {
-  color: #666;
-  line-height: 1.5;
-  font-size: 14px;
-  display: none;
-  padding: 8px;
-}
-
 @media screen and (min-width: 600px) {
   #aside-container {
     height: 100vh;
@@ -95,10 +87,6 @@ html {
 
   .search-icon {
     display: none;
-  }
-
-  .copyright-wrap {
-    display: block;
   }
 }
 

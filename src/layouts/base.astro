@@ -99,6 +99,11 @@ const navs = (getEnv(import.meta.env, Astro, 'NAVS') || '')
         </div>
         <div id="aside-container">
           <slot name="aside">
+            <input class="search-icon" name="icon" type="checkbox" placeholder="Search" />
+            <form class="search-form" action={searchAction} method="get">
+              {GOOGLE_SEARCH_SITE ? <input type="hidden" name="as_sitesearch" value={GOOGLE_SEARCH_SITE} /> : null}
+              <input type="text" name="q" placeholder="Search" />
+            </form>
             <div class="nav">
               <div class="nav-item">
                 <a href={SITE_URL} title={channel?.title} class={`nav-link ${pathname === '/' ? 'current' : ''}`}>
@@ -140,25 +145,6 @@ const navs = (getEnv(import.meta.env, Astro, 'NAVS') || '')
                   </div>
                 ))
               }
-            </div>
-            <input class="search-icon" name="icon" type="checkbox" placeholder="Search" />
-            <form class="search-form" action={searchAction} method="get">
-              {GOOGLE_SEARCH_SITE ? <input type="hidden" name="as_sitesearch" value={GOOGLE_SEARCH_SITE} /> : null}
-              <input type="text" name="q" placeholder="Search" />
-            </form>
-            <div class="copyright-wrap">
-              Powered by
-              <a
-                href="https://github.com/miantiao-me/BroadcastChannel"
-                title="BroadcastChannel"
-                target="_blank"
-                rel="noopener"
-              >
-                BroadcastChannel
-              </a> &
-              <a href="https://github.com/Planetable/SiteTemplateSepia" title="Sepia" target="_blank" rel="noopener">
-                Sepia
-              </a>
             </div>
           </slot>
         </div>

@@ -1,7 +1,7 @@
 :root {
-  --background-color: #f4f1ec;
+  --background-color: #ffffff;
   --foreground-color: #000000;
-  --highlight-color: orangered;
+  --highlight-color: #0073ff;
   --box-border-radius: 3px;
   --media-border-radius: 8px;
   --dot-size: 8px;
@@ -129,7 +129,7 @@ a.item-link:hover {
 .header-avatar {
   width: 40px;
   height: 40px;
-  border-radius: 100%;
+  border-radius: 8px;
   border: 3px solid #fff;
   box-shadow: var(--shadows);
   display: block;
@@ -375,7 +375,7 @@ audio::-webkit-media-controls-panel {
 }
 
 #aside-container .nav {
-  padding-top: 20px;
+  padding-top: 8px;
   position: sticky;
   top: 0;
 }
